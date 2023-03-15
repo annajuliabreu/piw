@@ -3,7 +3,7 @@ Repositório da disciplina de Projeto de Interface Web
 
 ## Aula 1 - Apresentação da Disciplina, ambiente de trabalho (VSCode e CodeSandBox), primeiros programas
 
-# O que é React?
+### O que é React?
 React é "uma biblioteca JavaScript declarativa, eficiente e flexível para a criação de interfaces de usuário (UI)"
 - Surgiu em 2011 no Facebook
 - Características: É uma Biblioteca e não é um framework; é baseado em Components (pequenos blocos, como um Lego); é usado para criar SPA (Single Page Application).
@@ -12,7 +12,7 @@ React é "uma biblioteca JavaScript declarativa, eficiente e flexível para a cr
 - O React pode ser utilizado para criar Apps Mobile com o React Native
 - O React é a biblioteca de criação de interfaces mais popular e é utilizado em grandes empresas: Facebook, Instagram, WhatsApp, Netflix, Dropbox...
 
-# **Components** - O que são components e porque eles são importantes?
+### **Components** - O que são components e porque eles são importantes?
 - O React é uma biblioteca baseada no conceito de components.
 - Os components permitem dividir a Interface do Usuário em partes independentes e reutilizáveis.
 - "É um pequeno pedaço isolável da tela reaproveitável, usá-los para compor telas."
@@ -44,7 +44,7 @@ Template de um component:
 
 ```
 
-# O que é JSX?
+### O que é JSX?
 - Um exemplo de código JSX é:
 ```
 const element = <h1> className="title">Hello World!</h1>
