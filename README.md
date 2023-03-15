@@ -32,6 +32,18 @@ function Welcome(props){
     return <h1>Hello, {props.name}</h1>;
 }
 ```
+Template de um component:
+```
+    const MyProps = () => {
+        return (
+            <div>
+
+            </div>
+        )
+    }
+    export default MyProps
+
+```
 
 ## O que é JSX?
 - Um exemplo de código JSX é:
@@ -63,16 +75,3 @@ Quem utiliza o JSX?
 ## Aula 2 - Funções internas
 
 ## Aula 3 - Props
-
-Template de um component:
-```
-    const MyProps = () => {
-        return (
-            <div>
-
-            </div>
-        )
-    }
-    export default MyProps
-
-```
