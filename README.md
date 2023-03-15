@@ -1,6 +1,8 @@
 # PIW 2023.1
 Repositório da disciplina de Projeto de Interface Web
 
+##### Referência de escrita: [Sintaxe básica de gravação e formatação no GitHub](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
 ## Aula 1 - Apresentação da Disciplina, ambiente de trabalho (VSCode e CodeSandBox), primeiros programas
 
 ### O que é React?
