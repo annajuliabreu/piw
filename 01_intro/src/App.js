@@ -27,13 +27,21 @@
 import './App.css';
 // import HelloWorld from './components/00_HelloWorld';
 // import Calculadora from './components/01_Calculadora';
-import MyProps from './components/02_MyProps';
+// import MyProps from './components/02_MyProps';
+// import MeusDados from './atividades/atividade00/02MeusDados';
+import Temperatura from './atividades/atividade00/03Temperatura';
 
 function App() {
   return (
     <div className="primeira-aula">
-     <MyProps nome="Anna" curso="Design Digital"/>
-     <MyProps nome="Yakov" curso="Teologia"/>
+      {/* <MeusDados /> */}
+
+      {/* <MyProps nome="Anna" curso="Design Digital"/>
+      <MyProps nome="Yakov" curso="Teologia"/> */}
+      
+      {<Temperatura/>}
+
+      {/* {<MeusDados nome="Anna Julia Abreu" curso="Design Digital" universidade="UFC Quixadá"/>} */}
     </div>
   );
 }

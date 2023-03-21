@@ -4,7 +4,10 @@ Repositório de estudos para disciplina de Projeto de Interface Web
 ##### Referência de escrita: [Sintaxe básica de gravação e formatação no GitHub](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 ### O que é React?
+> "A declarative, efficient, and flexible JavaScript library for building user interfaces"
+
 React é "uma biblioteca JavaScript declarativa, eficiente e flexível para a criação de interfaces de usuário (UI)"
+
 - Surgiu em 2011 no Facebook
 - Características: É uma Biblioteca e não é um framework; é baseado em Components (pequenos blocos, como um Lego); é usado para criar SPA (Single Page Application).
 - O React é feito com JavaScript
@@ -27,9 +30,9 @@ Dois tipos de Componentes:
 
 Exemplo de como é definido um componente de função:
 ```
-function Welcome(props){
-    return <h1>Hello, {props.name}</h1>;
-}
+    function Welcome(props){
+        return <h1>Hello, {props.name}</h1>;
+    }
 ```
 Template de um component:
 ```
@@ -47,7 +50,7 @@ Template de um component:
 ### O que é JSX?
 - Um exemplo de código JSX é:
 ```
-const element = <h1> className="title">Hello World!</h1>
+    const element = <h1> className="title">Hello World!</h1>
 ```
 - Não é apenas HTML nem apenas Js.
 - JSX serve para descrever como a nossa User Interface (UI) deve ser.
@@ -55,11 +58,11 @@ const element = <h1> className="title">Hello World!</h1>
 
 O código anterior após o transpiler se tornará:
 ```
-const element = React.createElement(
-    "h1", 
-    { className: "title" },
-    "Hello World!"
-)
+    const element = React.createElement(
+        "h1", 
+        { className: "title" },
+        "Hello World!"
+    )
 ```
 Com esse código preparamos nosso elemento para ser exibido no DOM.
 
@@ -76,30 +79,40 @@ Quem utiliza o JSX?
 - É um objeto/interface criado pelo Browser que representa a estrutura do nosso documento HTML e que nos dá meios para interagir com ele (usamos em geral o JavaScript para fazer isso).
 
 ```
-var myBtn = document.getElementById('btn');
+    var myBtn = document.getElementById('btn');
 
-myBtn.addEventListener(
-    'click', 
-    function(event){
-        alert('botão pressionado');
-    }, 
-    false
-);
+    myBtn.addEventListener(
+        'click', 
+        function(event){
+            alert('botão pressionado');
+        }, 
+        false
+    );
 ```
 
 ### Virtual DOM
 - É uma representação em JavaScript do DOM verdadeiro. Quando alterações e eventos acontecem, primeiro o React atualiza o Virtual DOM, analisa as mudanças e o que precisa ser atualizado no DOM, e depois realiza isso conciliando o Virtual DOM e o DOM.
 
-#### Porque o React usa o VIrtual DOM?
+#### Porque o React usa o Virtual DOM?
 - Acessar o DOM é mais lento que as operações em JavaScript
 - O Virtual DOM automaticamente encontra a maneira mais economica de atualizar o DOM (atualizando só os elementos necessários)
 
 ### Entendendo os elementos
 - Os menores elementos do React são os elements, através deles é que descrevemos o que vai aparecer na nossa tela.
 ```
-const element = <h1>Hello, world</h1>;
+    const element = <h1>Hello, world</h1>;
 ```
 - Diferente dos elementos DOM, os elementos do React são objetos simples e "baratos" de usar.
 - O Virtual DOM é responsável por atualizar o DOM E exibir esses elementos na tela
 - Para renderizar um elemento, primeiro escolhemos um nó do DOM, exemplo:
+```
+    <div id="root"></div>
+```
+- Tudo dentroo desse nó será atualizado pelo Virtual DOM
+- Agora para inserirmos nosso elemento na tela, podemos rodar:
+``` 
+    const element = <h1>Hello, it's me...</h1>;
+    RectDOM.render(element, document.getElementById('root'));
+```
 
+[Create React App](https://github.com/facebook/create-react-app?_gl=1*cf0g3c*_ga*MjgxODkzNjkyLjE2Nzg3NDgxNDA.*_ga_37GXT4VGQK*MTY3ODk2MTA2OS4xMS4xLjE2Nzg5NjQ0MzQuMC4wLjA.)
