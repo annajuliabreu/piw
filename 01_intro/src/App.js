@@ -31,21 +31,22 @@ import './App.css';
 // import MyProps from './components/02_MyProps';
 // import MeusDados from './atividades/atividade00/02MeusDados';
 // import Temperatura from './atividades/atividade00/03Temperatura';
-// import FunctionA from './components/04Hierarquia/FunctionA';
-// import { Header, Body, Footer } from './components/05_Multiplos';
-// import { Header as H, Body as B, Footer as F} from './components/05_Multiplos';
-// import * as Site from './components/05_Multiplos'
-// import {Supermercado, Legume, Fruta, Bebida} from './components/06_Children'
-// import LoremIpsum from './components/03Estudos/01_LoremIpsum';
-import Planets from './components/planets/planet';
+// import FunctionA from './components/03Hierarquia/FunctionA';
+// import { Header, Body, Footer } from './components/04_Multiplos';
+// import { Header as H, Body as B, Footer as F} from './components/04_Multiplos';
+// import * as Site from './components/04_Multiplos'
+// import {Supermercado, Legume, Fruta, Bebida} from './components/05_Children'
+// import Planets from './components/planets/planet';
+// import LoremIpsum from './components/loremipsum/01_LoremIpsum';
 
 function App() {
   return (
     <div className="primeira-aula">
       {/* eu crio o component no arquivo jsx e ingeto ele aqui no app js*/}
       {/* {<LoremIpsum/>} */}
-      {<Planets/>}
-      
+      {/* {<Planets/>} */}
+    
+
       {/* {<HelloWorld/>} */}
       {/* <MeusDados /> */}
       {/* <MyProps nome="Anna" curso="Design Digital"/>
@@ -71,7 +72,6 @@ function App() {
       <Site.Header/>
       <Site.Body/>
       <Site.Footer/> */}
-
     </div>
   );
 }
