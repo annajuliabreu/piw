@@ -26,22 +26,52 @@
 
 import './App.css';
 // import HelloWorld from './components/00_HelloWorld';
+// import HelloWorld from './components/00_HelloWorld';
 // import Calculadora from './components/01_Calculadora';
 // import MyProps from './components/02_MyProps';
 // import MeusDados from './atividades/atividade00/02MeusDados';
-import Temperatura from './atividades/atividade00/03Temperatura';
+// import Temperatura from './atividades/atividade00/03Temperatura';
+// import FunctionA from './components/04Hierarquia/FunctionA';
+// import { Header, Body, Footer } from './components/05_Multiplos';
+// import { Header as H, Body as B, Footer as F} from './components/05_Multiplos';
+// import * as Site from './components/05_Multiplos'
+// import {Supermercado, Legume, Fruta, Bebida} from './components/06_Children'
+// import LoremIpsum from './components/03Estudos/01_LoremIpsum';
+import Planets from './components/planets/planet';
 
 function App() {
   return (
     <div className="primeira-aula">
+      {/* eu crio o component no arquivo jsx e ingeto ele aqui no app js*/}
+      {/* {<LoremIpsum/>} */}
+      {<Planets/>}
+      
+      {/* {<HelloWorld/>} */}
       {/* <MeusDados /> */}
-
       {/* <MyProps nome="Anna" curso="Design Digital"/>
       <MyProps nome="Yakov" curso="Teologia"/> */}
-      
-      {<Temperatura/>}
-
+      {/* {<Temperatura/>} */}
+      {/* {< FunctionA sobrenome="Abreu" />} */}
       {/* {<MeusDados nome="Anna Julia Abreu" curso="Design Digital" universidade="UFC Quixadá"/>} */}
+      {/* {
+        <Supermercado nome="daNaju">
+          <Legume nome="Batata"/>
+        </Supermercado>
+      } */}
+  
+      {/* <H/>
+      <B/>
+      <F/> */}
+
+      {/* < Header />
+      < Body />
+      < Footer /> */}
+
+    {/* 
+      <Site.Header/>
+      <Site.Body/>
+      <Site.Footer/> */}
+
     </div>
   );
 }

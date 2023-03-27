@@ -115,4 +115,29 @@ Quem utiliza o JSX?
     RectDOM.render(element, document.getElementById('root'));
 ```
 
+### Entendendo as Props (proriedades) e funções puras
+
+#### Uma função pura
+
+```
+    function sum(a,b){
+        return a+b;
+    }
+```
+
+- A função recebe duas propriedades a e b
+- A função não altera o valor das entradas
+- Sempre retorna o mesmo resultado para os mesmos tipos de entradas
+
+#### Uma função impura
+```
+    function withdraw(account, amount){
+        account.total -= amount;
+    }
+```
+
+- A função altera o valor da sua entrada
+
+**Única regra estrita do React:** Todos os components React tem que agir como funções puras em relação aos seus props.
+
 [Create React App](https://github.com/facebook/create-react-app?_gl=1*cf0g3c*_ga*MjgxODkzNjkyLjE2Nzg3NDgxNDA.*_ga_37GXT4VGQK*MTY3ODk2MTA2OS4xMS4xLjE2Nzg5NjQ0MzQuMC4wLjA.)

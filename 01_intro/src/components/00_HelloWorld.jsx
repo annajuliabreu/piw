@@ -1,3 +1,5 @@
+import React from "react";
+
 //V0
 /*function HelloWorld() {
   return <div>
@@ -5,7 +7,6 @@
   </div>
 }*/
 
-import React from "react";
 
 //V1
 /*function HelloWorld() {
@@ -28,19 +29,19 @@ import React from "react";
   )
 }*/
 
-//V3
+//V3 - função anônima
 /*const HelloWorld = () =>
   <div>
     <h1>Jefferson de Carvalho V3</h1>
   </div>
 */
 
-//V4
+//V4 - componente de classe
 class HelloWorld extends React.Component {
   render() {
     return (
       <div>
-        <h1>Anna V4</h1>
+        <h1>Hello World!</h1>
       </div>
     )
   }
