@@ -36,7 +36,7 @@ import './App.css';
 // import { Header as H, Body as B, Footer as F} from './components/04_Multiplos';
 // import * as Site from './components/04_Multiplos'
 // import {Supermercado, Legume, Fruta, Bebida} from './components/05_Children'
-// import Planets from './components/planets/planet';
+import Planets from './components/planets/planet';
 // import LoremIpsum from './components/loremipsum/01_LoremIpsum';
 
 function App() {
@@ -44,7 +44,7 @@ function App() {
     <div className="primeira-aula">
       {/* eu crio o component no arquivo jsx e ingeto ele aqui no app js*/}
       {/* {<LoremIpsum/>} */}
-      {/* {<Planets/>} */}
+      {<Planets/>}
     
 
       {/* {<HelloWorld/>} */}
