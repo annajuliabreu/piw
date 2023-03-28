@@ -11,3 +11,7 @@ Repositório da disciplina de Projeto de Interface Web
 ## Aula 4 - Hierarquia de props
 
 ## Aula 5 - props.children
+
+## Aula 6 - Contextos
+
+[React Docs - Context](https://react.dev/learn/passing-data-deeply-with-context#the-problem-with-passing-props)
