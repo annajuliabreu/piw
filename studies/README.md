@@ -70,6 +70,15 @@ Template de um component:
 - JSX não é interpretado pelo browser, por este motivo devemos utilizar um transpiler/compilador (em geral babel) para realizar essa transpilação.
 - É o formato usado pelo React para representar os elementos do DOM
 - Facilita o processo de escrita do conteúdo que deve ser renderizado na tela.
+- Facilita a construção de componentes HTML usando JS
+- Permite a escrita de código HTML diretamente no JS
+- Trata código HTML como objeto: 
+    - Pode-se manipular como qualquer objeto JS;
+    - Inserir em lista;
+    - Receber como parâmetro da função;
+    - Serve como valor de retorno de função.
+- Além disso, se pode colocar código JS dentro do código HTML
+- Código JS dentro do HTML vai dentro de {}
 
 O código anterior após o transpiler se tornará:
 ```
@@ -320,13 +329,16 @@ V6
 async function acessarAPI(){
     const response = await fetch("https://api.github.com/users/annajuliabreu") 
     const jsonResposta = response.json()
+    jsonResposta
     .then(
         (data)=>{
         console.log(data)
         }
     )
 //     console.log("company: " + jsonResposta.company)
-}
+}}
+
+
 
 
 ```
