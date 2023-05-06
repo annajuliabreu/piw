@@ -6,7 +6,7 @@ function Conteudo(){
     let linkBehance = (<a href="https://be.net/">Behance</a>)
     let linkInsta = (<a href="https://instagram.com">Instagram</a>)
     let linkVsco = (<a href="https://vsco.co">VSCO</a>)
-    
+
     return(
         <div>
                 <h2>O que é uma rede social?</h2>
@@ -26,9 +26,19 @@ function Conteudo(){
     )
 }
 
+function Cabecalho({paginaAtual}){
+    return(
+        <header>
+            <h1>Matrícula UFC QXD</h1>
+            <span>Você está na {paginaAtual}</span>
+        </header>
+    )
+}
+
 export function PaginaPrincipal() {
     return (
         <Fragment>
+            <Cabecalho paginaAtual="pagina de matrícula"/> <br/>
             <Navegador />
             <Conteudo />
         </Fragment>

@@ -141,7 +141,22 @@ Quem utiliza o JSX?
 ```
 
 ### Entendendo as Props (proriedades) e funções puras
+- Como enviar dados de entrada para compor um componente?
+    Passar o nome de um produto
+    Passar a mensagem de um post
+- Usando as Props! **Props** são passados pelo componente pai como atributo na tag HTML do componente filho
+- Props são recebidos pelo componente filho via
+    Parâmetro do construtor (componente classe)
+    Parâmetro da função (componente função)
 
+```
+    export function Teste(props){
+        return(
+            <div> Sou um componente{props.nome}</div>
+        )
+    }
+    <Teste nome="teste 1"></Teste>
+``` 
 #### Uma função pura
 
 ```
