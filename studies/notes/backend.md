@@ -52,7 +52,7 @@ Aplicação MERN (MongoDB, ExpressJS, ReactJS, NodeJS)
 module.exports é a variável que contém tudo o que o módulo exporta
 require() importa tudo o que foi exportado de um módulo em outro arquivo
 
-### Servidor
+## Servidor
 
 #### Espress.js
 - Framework para facilitar criação de rotas, templates e verbos HTTP
@@ -91,8 +91,9 @@ require() importa tudo o que foi exportado de um módulo em outro arquivo
 ```
 Middleware express.static serve páginas estáticas na pasta "./public"
 
-### JSON 
+## JSON 
 - JSON é uma estrutura de dados derivada da notação de objetos do JS
+
 **Sintaxe**
     - Os dados estão dispostos em pares/valor
     - Os dados são separados por vírgula ,
@@ -100,25 +101,26 @@ Middleware express.static serve páginas estáticas na pasta "./public"
     - Listas são colocadas em colchetes []
 
 **Exemplos de JSON**
-Exemplo par nome/valor: "firstName":"Anna"
-- Nomes JSON requerem aspas dupalas
-- Valores JSON podem ser números, strings, booleanos, listas, objetos ou null
 
-Exemplo objetos: 
-``` 
-{"firstName":"Anna", "lastName":"Abreu"}
-```
+- Exemplo par nome/valor: "firstName":"Anna"
+    - Nomes JSON requerem aspas dupalas
+    - Valores JSON podem ser números, strings, booleanos, listas, objetos ou null
 
-Exemplo lista:
-```
-[
-    {"firstName":"Anna", "lastName":"Abreu"},
-    {"firstName":"Léo", "lastName":"Abreu"}
-    {"firstName":"Biel", "lastName":"Abreu"}
-]
-```
+- Exemplo objetos: 
+    ``` 
+    {"firstName":"Anna", "lastName":"Abreu"}
+    ```
 
-### Protocolo HTTP
+- Exemplo lista:
+    ```
+    [
+        {"firstName":"Anna", "lastName":"Abreu"},
+        {"firstName":"Léo", "lastName":"Abreu"}
+        {"firstName":"Biel", "lastName":"Abreu"}
+    ]
+    ```
+
+## Protocolo HTTP
 
 ### Arquitetura Cliente-Servidor
 ![Arquitetura Cliente-Servidor](https://1907153667-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MVRn4REfCrgOC5oEZbZ%2Fuploads%2FxKPSHwlrhgIViZugpKcS%2Fsite-estatico.png?alt=media&token=3f3d0691-97e2-424d-84f7-d8e1b62cbadf)
@@ -141,7 +143,7 @@ Funcionamento
     - O cliente (navegador/mobile/desktop/iot) envia uma requisição HTTP para o servidor
     - O servidor envia uma resposta HTTP ao cliente
 
-### Composição da Requisição HTTP:
+## Composição da Requisição HTTP:
 
 ### Mensagens do HTTP
 **O que é uma requisição?** 
@@ -184,3 +186,55 @@ A resposta (response) dada pelo servidor contém as informações solicitadas pe
 3. O response body - assim como na requisição, é opcional e contém dados sobre o recurso requisitado.
 
 ![Response](https://www.azion.com/static/images/uploads/http-response-body-pt.png)
+
+### Padrão REST
+Respresentational State Transfer (REST)
+    - Abstração de arquiteturas de um componente
+    - Define forma de se consumir um dado recurso
+    - Ignora implementação do componente
+    - Foca na sintae de comunicação do componente
+Usa protocolo HTTP
+    - Usa métodos/verbo (GET/POST/PUT...) para indicar uma ação
+Podemos usar JSON como formato de dados
+
+**Verbos:**
+
+- GET: Recuperar itens
+- POST: Adicionar item
+- PUT: Atualizar item
+- DELETE: Deletar item
+
+**URL:**
+
+Exemplo: https://jsonplaceholder.typicode.com/users
+
+- GET/users: busca todos os usuários (retorna a lista de usuarios)
+- GET/users/1: busca o usuário com id 1
+- POST/users: insere um novo usuário, o novo usuário vai no corpo da requisição
+- DELETE/users/1: remove usuário com id 1
+- GET/users/1/comments: busca todos os comentários do usuário com id 1
+- GET/comments?postId=1: busca todos os usuários cujo o id do post para ele foi feito é 1
+
+### Estrutura de diretórios
+
+```
+node_aluno
+    app
+        controllers: controladores de chamados pelas rotas da aplicação
+        models: models que representam o domínio do problema
+        routes: rotas da aplicação
+        views: views
+    config: configuração do express, banco de dados etc
+    public: todos os arquivos acessíveis diretamente pelo navegador
+```
+### Endpoints com Query
+
+- Você pode querer ter critérios ao fazer uma busca, ex. todos os alunos com o IRA maior que 5000
+- É possível fazer isso usando parâmetros de query direto na url, no formato chave-valor. 
+Exemplos:
+https://localhost:8393/api/alunos?min_ira=5000
+https://localhost:8393/api/alunos?min_ira=5000&max_ira=7000
+
+--------------------------------
+
+## Introdução a Banco de Dados
