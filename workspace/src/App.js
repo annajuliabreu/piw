@@ -1,3 +1,9 @@
+// ap1
+import Questao01X from './components/ap1/Questao01/Questao01X';
+// import Questao02 from './components/ap1/Questao02/Questao02';
+// import Questao03 from './components/ap1/Questao03/Questao03';
+
+
 // atividades ----
 // import HelloWorld from './components/00_HelloWorld';
 // import HelloWorld from './components/00_HelloWorld';
@@ -18,7 +24,7 @@
 // import PlacaMae from './atividades/atividade01/02MeuPC';
 // import * as PC from './atividades/atividade01/02MeuPC';
 // import { Hero, Enemy, Arena, World } from './atividades/atividade01/03Batalha';
-import FunctionA from './components/06Contexto/FuncaoA';
+// import FunctionA from './components/06Contexto/FuncaoA';
 // import FunctionB from './components/06Contexto/FuncaoB';
 // import FunctionC from './components/06Contexto/FuncaoC';
 // import FunctionD from './components/06Contexto/FuncaoD';
@@ -28,6 +34,10 @@ import FunctionA from './components/06Contexto/FuncaoA';
 // import TelaPrincipal from './components/11Redux/v2/TelaPrincipal';
 // import MeuIndex from './components/11Redux/v2/MeuIndex';
 // import { MinhaPromessa } from './components/12Promise/MinhaPromessa';
+// import SaveData from './components/07LocalStorage/FunctionLocalStorage';
+// import Pai from './components/09PaiFilho/Pai';
+// import FuncaoEstados from './components/10Estados/FuncaoEstados';
+
 import React from 'react';
 import './App.css';
 
@@ -35,6 +45,11 @@ import './App.css';
 function App() {
   return (
     <div className="primeira-aula">
+      {/* ---- ap1 */}
+      <Questao01X />
+      {/* <Questao02/> */}
+      {/* <Questao03/> */}
+
       {/* ---- Estudo // Eu crio o component no arquivo jsx e ingeto ele aqui no app js*/}
       {/* {<LoremIpsum/>} */}
       {/* {<Planets/>} */}
@@ -62,7 +77,11 @@ function App() {
       {/* <Avo /> */}
 
       {/* ------ Exemplos*/}
-      <FunctionA />
+      {/* <PokemonAxios /> */}
+      {/* <Pai /> */}
+      {/* <FuncaoEstados /> */}
+      {/* <SaveData/> */}
+      {/* <FunctionA /> */}
       {/* < FunctionA sobrenome="Abreu" />
       {/* {<MeusDados nome="Anna Julia Abreu" curso="Design Digital" universidade="UFC Quixadá"/>} */}
 

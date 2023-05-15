@@ -1,9 +1,13 @@
 import React from "react";
 import MinhaCor from "./MeuContexto";
+import { useContext } from "react";
 
 const FunctionD = () => {
+    const {color} = useContext(MinhaCor);
     return (
-        <h1>Função D</h1>
+        <div>
+            <h1 style={{ backgroundColor: color }}>Função D</h1>
+        </div>
     )
 }
 
