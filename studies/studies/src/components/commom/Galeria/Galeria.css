@@ -1,0 +1,15 @@
+.galeria{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 36px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 112px;
+}
+
+.galeria .img{
+    box-sizing: border-box;
+    margin: 12px
+}

@@ -9,7 +9,7 @@
 // import { Header, Body, Footer } from './components/04_Multiplos';
 // import { Header as H, Body as B, Footer as F} from './components/04_Multiplos';
 // import * as Site from './components/04_Multiplos'
-// import {Supermercado, Legume, Fruta, Bebida} from './components/05_Children'
+// import { Supermercado, Legume, Fruta, Bebida, Limpeza } from './components/05_Children'
 // import Planets from './components/planets/planet';
 
 // conteúdos ------
@@ -18,7 +18,7 @@
 // import PlacaMae from './atividades/atividade01/02MeuPC';
 // import * as PC from './atividades/atividade01/02MeuPC';
 // import { Hero, Enemy, Arena, World } from './atividades/atividade01/03Batalha';
-// import FunctionA from './components/06Contexto/FuncaoA';
+import FunctionA from './components/06Contexto/FuncaoA';
 // import FunctionB from './components/06Contexto/FuncaoB';
 // import FunctionC from './components/06Contexto/FuncaoC';
 // import FunctionD from './components/06Contexto/FuncaoD';
@@ -27,7 +27,7 @@
 // import PokemonAxios from './components/10Axios/PokemonAxios';
 // import TelaPrincipal from './components/11Redux/v2/TelaPrincipal';
 // import MeuIndex from './components/11Redux/v2/MeuIndex';
-import { MinhaPromessa } from './components/12Promise/MinhaPromessa';
+// import { MinhaPromessa } from './components/12Promise/MinhaPromessa';
 import React from 'react';
 import './App.css';
 
@@ -38,14 +38,13 @@ function App() {
       {/* ---- Estudo // Eu crio o component no arquivo jsx e ingeto ele aqui no app js*/}
       {/* {<LoremIpsum/>} */}
       {/* {<Planets/>} */}
-      <MinhaPromessa/>
 
       {/* ------ Atividade 00 */}
       {/* {<HelloWorld/>} */}
       {/* <MeusDados /> */}
-      {/* <MyProps nome="Anna" curso="Design Digital"/>
-      <MyProps nome="Yakov" curso="Teologia"/> */}
-      {/* {<Temperatura/>} */}
+      {/* <MyProps nome="Anna" curso="Design Digital"/> */}
+      {/* <MyProps nome="Yakov" curso="Teologia"/> */}
+      {/* {<Temperatura/>}
 
       {/* -----Atividade 01 */}
       {/* {<Pai />} */}
@@ -63,15 +62,21 @@ function App() {
       {/* <Avo /> */}
 
       {/* ------ Exemplos*/}
-      {/* <FunctionA /> */}
-      {/* {< FunctionA sobrenome="Abreu" />} */}
+      <FunctionA />
+      {/* < FunctionA sobrenome="Abreu" />
       {/* {<MeusDados nome="Anna Julia Abreu" curso="Design Digital" universidade="UFC Quixadá"/>} */}
-      {/* {
-        <Supermercado nome="daNaju">
-          <Legume nome="Batata"/>
-        </Supermercado>
-      } */}
 
+       {/* <MinhaPromessa/> */}
+
+        {/* <Supermercado nome="daNaju"> */}
+          {/* esses produtos são "filhos" do Supermercado, os children, componentes que estão dentro do conteiner Supermercado*/}
+          {/* <Legume nome="Batata" />
+          <Fruta nome="Banana" />
+          <Bebida nome="Água" />
+          <Bebida nome="Suco de abacaxi"/>
+          <Limpeza nome="Sabão de coco"/> */}
+        {/* </Supermercado> */}
+        
       {/* <H/>
       <B/>
       <F/> */}

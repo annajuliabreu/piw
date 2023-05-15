@@ -1,3 +1,6 @@
 import { createContext } from "react";
-const MinhaCor = createContext();
+
+// o "meu contexto" é tudo aquilo que eu quero transmitir para os componentes que tem interesse
+const MinhaCor = createContext("blue");
+
 export default MinhaCor;

@@ -1,4 +1,5 @@
 import FunctionB from './FunctionB';
+import React from 'react';
 
 const FunctionA = ({sobrenome}) => {
     return(
@@ -6,7 +7,7 @@ const FunctionA = ({sobrenome}) => {
             <h1>Componente A - {sobrenome}</h1>
             <FunctionB nome="Anna" sobrenome={sobrenome}/>
             <FunctionB nome="Biel"/>
-            <FunctionB nome="Bibi"/>
+            <FunctionB nome="Leo"/>
             <FunctionB nome="Julia" sobrenome={sobrenome}/>
         </div>
     )

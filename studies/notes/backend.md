@@ -238,3 +238,19 @@ https://localhost:8393/api/alunos?min_ira=5000&max_ira=7000
 --------------------------------
 
 ## Introdução a Banco de Dados
+Toda aplicação tem dados a serem armazenados. 
+Exemplos:
+    - Rede social: dados dos usuários, posts
+    - Banco: dados dos clientes, contas, investimentos
+    - E-commerce: dados de clientes, produtos, cartão de crédito
+Como armazenar esses dados?
+
+Histórico:
+- Anos 60: surge os sistemas de arquivos; dados podem ser armazenados em arquivos; o dev implementa manualmente a inserção, consulta, modificação e a deleção dos dados todos à mão.
+- Anos 70: surge os Sistemas de gerenciamento de banco de dados (SGBD). Codd propôs o modelo de dados relacionais, o Sistema de gerenciamente de Banco de Dados Relacionais (SGBDR)
+- Anos 80: SGBDs se difundem em empresas e na comunidade científica. A linguagem SQL (Structured Query Language) se torna padrão para manipulação de dados em SGBDs.
+- Anos 90: SGBDs dominantes: DB2 (IBM), SQL Server (Microsoft), Oracle
+- Séc 21: Big Data - 5 Vs: velocidade, volume variedade, veracidade e valor. Banco de dados distribuídos (rodam em várias máquinas: SGBDs em nuvem. Aparecimento de novos modelos de dados (NoSQL).
+
+Conceitos básicos: 
+- Banco de dados é uma coleção de dados inter-relacionados entre si, representando informações sobre um domínio específico

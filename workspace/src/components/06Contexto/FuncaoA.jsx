@@ -6,12 +6,13 @@ import MinhaCor from "./MeuContexto";
 const FunctionA = () => {
     const cor = "blue";
     return (
-        <MinhaCor.Provider value={{minhaCor:cor, nome:"Anna"}}>
+        // eu envolvo toda a minha árvore com o Provider
+        // todo contexto tem um valor padrão
+        <MinhaCor.Provider value={{minhaCor:cor}}>
             <div>
                 <h1 style={{ backgroundColor: cor }}>Função A</h1>
                 <FunctionB />
                 <FunctionC />
-                {/* <FunctionC cor={cor} /> */}
             </div>
         </MinhaCor.Provider>
     )

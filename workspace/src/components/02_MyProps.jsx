@@ -41,10 +41,11 @@
 // export default MyProps
 
 
+import React from 'react';
+
 // v2
 // descontroi a props logo no início
 const MyProps = ({nome,curso}) => {
-
     return (
         <div>
             <h1>Meu nome é {nome} e meu curso é {curso}</h1>
