@@ -233,127 +233,107 @@ Você pode monitorá-los ou manipulá-los durante 3 fases:
 [State and Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
 
 
-### Fetch
+## SPA (Single Page Application)
+- São aplicações Web que tem como objetivo trazer uma experiência similar ao de um APP ou Desktop para o usuário (sem reloads comuns aos sites)
+
+### O que são rotas?
+- São os caminhos que usamos no browser para  acessar páginas específicas de um site.
+
+**Como separar seu APP react em Páginas (sem reload)?**
+A principal biblioteca que nos permite fazer isso se chama React Router. 
+
+
+### React Router - Roteamento
+BrowserRouter: Tag para habilitar o roteamento
+Route: Tag para habilitar rotas
 
 ```
-fetch("https://api.github.com/users/annajuliabreu")
-.then(
-    (response)=>{
-        console.log(response)
-    }
-)
+<BrowserRouter>
+    <React>
+</BrowserRouter>
+```
 
-fetch("https://api.github.com/users/annajuliabreu")
-.then(
-    (response)=>{
-        console.log(response.json())
-    }
-)
+### Eventos
+- Como capturar eventos? 
+    - Click, MouseDown, DoubleClick
+- Pode-se executar eventos usando atributos HTML do componente
+- Para executar uma ação, passamos uma função *callback* que executa a ação desejada
 
-fetch("https://api.github.com/users/annajuliabreu")
-.then(
-    (response)=>{
-//         console.log(response.json())
-           return response.json()
-    }
-)
-
-fetch("https://api.github.com/users/annajuliabreu")
-.then(
-    (response)=>{
-//         console.log(response.json())
-           return response.json()
-    }
-)
-.then(
-    (data)=>{
-        console.log(data)
-    }
-)
-
-V1
-fetch("https://api.github.com/users/annajuliabreu")
-.then(
-    (response)=>{
-//         console.log(response.json())
-           return response.json()
-    }
-)
-.then(
-    (data)=>{
-        console.log(data.company)
-    }
-)
-
-V2
-function acessarAPI(){
-    const response = 
-    fetch("https://api.github.com/users/annajuliabreu")    
-}
-
-V3
-function acessarAPI(){
-    const response = 
-        fetch("https://api.github.com/users/annajuliabreu") 
-            console.log(response)
-}
-
-acessarAPI()
-
-V3
-async function acessarAPI(){
-    const response = await fetch("https://api.github.com/users/annajuliabreu") 
-    console.log(response)
-}
-
-acessarAPI()
-
-async function acessarAPI(){
-    const response = await 
-    fetch("https://api.github.com/users/annajuliabreu") 
-    console.log("response:"+ response)
-}
-
-async function acessarAPI(){
-    const response = await fetch("https://api.github.com/users/annajuliabreu") 
-    const jsonResposta = response.json()
-    console.log(jsonResposta)
-
-
-async function acessarAPI(){
-    const response = await fetch("https://api.github.com/users/annajuliabreu") 
-    const jsonResposta = response.json()
-    console.log("response: "+jsonResposta)
-}
-
-V4
-async function acessarAPI(){
-    const response = await fetch("https://api.github.com/users/annajuliabreu") 
-    const jsonResposta = await response.json()
-    console.log(jsonResposta)
-}
-
-V5
-async function acessarAPI(){
-    const response = await fetch("https://api.github.com/users/annajuliabreu") 
-    const jsonResposta = await response.json()
-    console.log("company: " + jsonResposta.company)
-}
-
-V6  
-async function acessarAPI(){
-    const response = await fetch("https://api.github.com/users/annajuliabreu") 
-    const jsonResposta = response.json()
-    jsonResposta
-    .then(
-        (data)=>{
-        console.log(data)
+```
+    function ActionLink(){
+        function handleClick(e){
+            e.preventDefault();
+            console.log("clicou");
         }
-    )
-//     console.log("company: " + jsonResposta.company)
-}}
+        return(
+            <a href="#" onClick={handleClick}>
+                Clique aqui!
+            </a>
+        )
+    }
+```
+
+**Eventos de Mouse:** onClick, onDoubleClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp
 
 
+### Hooks
 
+**Estado de um componente** 
+- Em um componente de botão podemos querer armazenar o estado do botão: Quantas vezes ele foi clicado, se ele está desativado, se ele já foi clicado.
+- Usaremos react hooks: **useState**
+- Usaremos para armazenar dados para lógica interna do componenete (logica de apresentação).
+- Enventualmente, usaremos para guardar dados dos alunos, matriculas, posts, usuários. Geralmente, isso não se faz. Mas usaremos para facilitar um pouco a arquitetura da aplicação.
+
+**useState()**
 
 ```
+import React { useState } from 'react''
+
+function Example(){
+    const [count, setCount] = useState(0);
+    return <button onClick={()=>{setCount(count+1)}}>
+        pressed {count} times
+    </button>
+}
+```
+
+- useState recebe o valor inicial do estado. 
+    - Nesse caso, o contador começa em 0.
+- useState retorna dois valores. 
+    - O primeiro é o estado atual (count)
+    - Segundo valor é uma funcção para atualizar o estado atual (setCount)
+
+exemplo: 
+```
+function Botao() {
+        const [count, setCount] = useState(0);
+        const [clicked, setClicked] = useState(false);
+        console.log(count, clicked);
+
+        const handleClick = () => {
+            setCount(count + 1);
+            setClicked(true);
+        }
+
+        let style = {};
+        if (clicked === true) {
+            style["backgroundColor"] = "#B276FF";
+        }else{
+            style["backgroundColor"] = "#D9BBFF";
+        }
+        console.log(style);
+
+        return <button onClick={handleClick} style={style}>
+            Pressed {count} times
+        </button>
+    }
+```
+
+### Formulários
+Como capturar as informações de um formulário?
+React Hook Forms
+    - Recebe nada
+    - Recebe dois valores
+        - Primeiro é um objeto para registrar os campos
+        - Segundo é o que executa a ação ao submeter o forms
+Instalação: npm install react-hook-form
